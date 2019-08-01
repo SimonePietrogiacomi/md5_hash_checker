@@ -5,7 +5,14 @@ echo "Remember: the first argument is the file path, while the second is the cor
 
 #./hashDistro.sh $1 (file path) $2 (hash expected)
 
+echo ""
+echo "Calculating md5"
+
 local_hash="`md5sum $1 | awk '{print $1}'`"
+
+echo ""
+echo "Complete!"
+
 correct_hash=$2
 
 echo ""
