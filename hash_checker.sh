@@ -1,9 +1,22 @@
 #!/bin/bash
+#./hashDistro.sh $1 (file path) $2 (hash expected)
 
 echo "This program will compare the hash of your file with the correct one"
 echo "Remember: the first argument is the file path, while the second is the correct md5 hash string"
 
-#./hashDistro.sh $1 (file path) $2 (hash expected)
+if [ "$1" == "" ]
+then
+	echo ""
+	echo "Please insert the path of the file as first argument"
+	exit 0
+fi
+
+if [ "$2" == "" ]
+then
+	echo ""
+	echo "Please insert the correct md5 hash string as second argument"
+	exit 0
+fi
 
 echo ""
 echo "Calculating md5"
