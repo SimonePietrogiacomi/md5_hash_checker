@@ -8,14 +8,14 @@ if [ "$1" == "" ]
 then
 	echo ""
 	echo "Please insert the path of the file as first argument"
-	exit 0
+	exit 1
 fi
 
 if [ "$2" == "" ]
 then
 	echo ""
 	echo "Please insert the correct md5 hash string as second argument"
-	exit 0
+	exit 1
 fi
 
 echo ""
